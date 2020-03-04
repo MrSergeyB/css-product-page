@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,300, 500');
+body,
+html {
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f6f6f6;
+  max-width: 1240px;
+  min-width: 100vh;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  padding: 30px 0;
+}
+
+.logo {
+  color: black;
+  text-decoration: none;
+  font-size: 2em;
+  font-style: initial;
+  font-weight: 300;
+  flex: 1;
+}
+
+.product-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.prodcuts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.product-info h5 {
+  font-weight: 500;
+}
+
+.product-info h6 {
+  font-weight: 300;
+  color: #666;
+}
+
+.filter,
+.sort {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter {
+  padding-right: 20px;
+}
+
+label {
+  color: #666;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 2em;
+  text-transform: uppercase;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  flex: 1 16%;
+  background-color: #fff;
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
+}
+
+.product-info {
+  margin-top: auto;
+  padding-top: 20px;
+  text-align: center;
+}
+
+@media (max-width: 920px) {
+  .product-card {
+    flex: 1 21%;
+  }
+
+  .products .product-card:first-child,
+  .products .product-card:nth-child(2) {
+    flex: 2 46%;
+  }
+}
+
+@media (max-width: 600px) {
+  .product-card {
+    flex: 1 46%;
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .prodcuts {
+    flex-direction: column;
+  }
+
+  .filter {
+    padding: 10px 0;
+  }
+}
